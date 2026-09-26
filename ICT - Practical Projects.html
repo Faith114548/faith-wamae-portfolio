@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICT Practical Projects | Faith Wamae</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0ff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        header {
+            background-color: #6c4ab6;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+        }
+
+        header h1 {
+            margin: 10px 0;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #6c4ab6;
+        }
+
+        .calculator {
+            max-width: 400px;
+            margin: auto;
+            background-color: #f5f0ff;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #6c4ab6;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #563795;
+        }
+
+        #result {
+            background-color: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #6c4ab6;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #6c4ab6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>💻 ICT Practical Projects</h1>
+
+        <p>
+            Practical ICT projects created by Faith Wamae
+        </p>
+
+    </header>
+
+
+    <section>
+
+        <h2>🧮 Simple Calculator</h2>
+
+        <p>
+            A simple calculator created using HTML, CSS and JavaScript.
+        </p>
+
+        <div class="calculator">
+
+            <input
+                type="number"
+                id="number1"
+                placeholder="Enter first number"
+            >
+
+            <input
+                type="number"
+                id="number2"
+                placeholder="Enter second number"
+            >
+
+            <button onclick="calculate('+')">➕ Add</button>
+
+            <button onclick="calculate('-')">➖ Subtract</button>
+
+            <button onclick="calculate('*')">✖️ Multiply</button>
+
+            <button onclick="calculate('/')">➗ Divide</button>
+
+            <div id="result">
+                Result will appear here
+            </div>
+
+        </div>
+
+    </section>
+  <!-- PASSWORD STRENGTH CHECKER -->
+
+<section>
+
+    <h2>🔐 Password Strength Checker</h2>
+
+    <p>
+        Enter a password to check its strength.
+    </p>
+
+    <div class="calculator">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            onkeyup="checkPassword()"
+        >
+
+        <div id="passwordResult">
+            Password strength will appear here
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TO-DO LIST -->
+
+<section>
+
+    <h2>📝 To-Do List</h2>
+
+    <p>
+        Add tasks, mark them as completed, or delete them.
+    </p>
+
+    <div class="calculator">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a task"
+        >
+
+        <button onclick="addTask()">
+            ➕ Add Task
+        </button>
+
+        <div id="taskList"></div>
+
+    </div>
+
+</section>
+  <!-- COMPUTER TROUBLESHOOTING GUIDE -->
+
+<section>
+
+    <h2>🛠️ Computer Troubleshooting Guide</h2>
+
+    <p>
+        Select a computer problem to see basic troubleshooting steps.
+    </p>
+
+    <div class="calculator">
+
+        <select id="problem">
+            <option value="">-- Select a problem --</option>
+            <option value="power">💻 Computer won't turn on</option>
+            <option value="internet">🌐 No internet connection</option>
+            <option value="slow">🐌 Computer is slow</option>
+            <option value="sound">🔊 No sound</option>
+            <option value="keyboard">⌨️ Keyboard not working</option>
+            <option value="virus">🦠 Suspected computer virus</option>
+        </select>
+
+        <button onclick="showSolution()">
+            🔍 Troubleshoot
+        </button>
+
+        <div id="solution">
+            Troubleshooting steps will appear here
+        </div>
+
+    </div>
+
+</section>
+  <!-- IP ADDRESS INFORMATION -->
+
+<section>
+
+    <h2>🌐 IP Address Information</h2>
+
+    <p>
+        Enter an IPv4 address to view basic information about it.
+    </p>
+
+    <div class="calculator">
+
+        <input
+            type="text"
+            id="ipAddress"
+            placeholder="Example: 192.168.1.10"
+        >
+
+        <button onclick="checkIP()">
+            🔍 Check IP Address
+        </button>
+
+        <div id="ipResult">
+            IP information will appear here
+        </div>
+
+    </div>
+
+</section>
+    <a href="index.html" class="back-button">
+        ⬅️ Back to Portfolio
+    </a>
+
+
+    <footer>
+
+        <h3>Faith Wamae 💜</h3>
+
+        <p>
+            ICT | Web Design | Technology
+        </p>
+
+        <p>
+            © 2026 Faith Wamae. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function calculate(operator) {
+
+            let number1 =
+                Number(document.getElementById("number1").value);
+
+            let number2 =
+                Number(document.getElementById("number2").value);
+
+            let result;
+
+
+            if (
+                document.getElementById("number1").value === "" ||
+                document.getElementById("number2").value === ""
+            ) {
+
+                alert("Please enter both numbers.");
+
+                return;
+            }
+
+
+            if (operator === "+") {
+
+                result = number1 + number2;
+
+            }
+
+            else if (operator === "-") {
+
+                result = number1 - number2;
+
+            }
+
+            else if (operator === "*") {
+
+                result = number1 * number2;
+
+            }
+
+            else if (operator === "/") {
+
+                if (number2 === 0) {
+
+                    alert("You cannot divide by zero.");
+
+                    return;
+                }
+
+                result = number1 / number2;
+
+            }
+
+
+            document.getElementById("result").innerHTML =
+                "💡 Result: " + result;
+
+        }
+      function checkPassword() {
+
+    let password =
+        document.getElementById("password").value;
+
+    let result =
+        document.getElementById("passwordResult");
+
+
+    if (password.length === 0) {
+
+        result.innerHTML =
+            "Password strength will appear here";
+
+        return;
+    }
+
+
+    let score = 0;
+
+
+    if (password.length >= 8) {
+        score++;
+    }
+
+    if (/[A-Z]/.test(password)) {
+        score++;
+    }
+
+    if (/[a-z]/.test(password)) {
+        score++;
+    }
+
+    if (/[0-9]/.test(password)) {
+        score++;
+    }
+
+    if (/[^A-Za-z0-9]/.test(password)) {
+        score++;
+    }
+
+
+    if (score <= 2) {
+
+        result.innerHTML =
+            "🔴 Weak password";
+
+    }
+
+    else if (score <= 4) {
+
+        result.innerHTML =
+            "🟠 Medium password";
+
+    }
+
+    else {
+
+        result.innerHTML =
+            "🟢 Strong password";
+
+    }
+
+      }
+      let tasks = [];
+
+function addTask() {
+
+    let taskInput =
+        document.getElementById("taskInput");
+
+    let task =
+        taskInput.value.trim();
+
+    if (task === "") {
+
+        alert("Please enter a task.");
+
+        return;
+    }
+
+    tasks.push({
+        text: task,
+        completed: false
+    });
+
+    taskInput.value = "";
+
+    displayTasks();
+}
+
+
+function displayTasks() {
+
+    let list =
+        document.getElementById("taskList");
+
+    list.innerHTML = "";
+
+    tasks.forEach(function(task, index) {
+
+        list.innerHTML += `
+            <div style="
+                background:#f5f0ff;
+                padding:15px;
+                margin-top:15px;
+                border-radius:10px;
+            ">
+
+                <span style="
+                    text-decoration:${task.completed ? 'line-through' : 'none'};
+                ">
+                    ${task.text}
+                </span>
+
+                <br><br>
+
+                <button onclick="completeTask(${index})">
+                    ✅ Complete
+                </button>
+
+                <button onclick="deleteTask(${index})">
+                    🗑️ Delete
+                </button>
+
+            </div>
+        `;
+    });
+}
+
+
+function completeTask(index) {
+
+    tasks[index].completed =
+        !tasks[index].completed;
+
+    displayTasks();
+}
+
+
+function deleteTask(index) {
+
+    tasks.splice(index, 1);
+
+    displayTasks();
+}
+      function showSolution() {
+
+    let problem =
+        document.getElementById("problem").value;
+
+    let solution =
+        document.getElementById("solution");
+
+    if (problem === "") {
+
+        solution.innerHTML =
+            "⚠️ Please select a computer problem.";
+
+        return;
+    }
+
+    if (problem === "power") {
+
+        solution.innerHTML = `
+            <h3>💻 Computer won't turn on</h3>
+            <p>1. Check that the power cable is connected.</p>
+            <p>2. Check the power socket.</p>
+            <p>3. Make sure the charger is connected properly.</p>
+            <p>4. Try turning the computer on again.</p>
+        `;
+    }
+
+    else if (problem === "internet") {
+
+        solution.innerHTML = `
+            <h3>🌐 No internet connection</h3>
+            <p>1. Check that Wi-Fi is turned on.</p>
+            <p>2. Check your router or modem.</p>
+            <p>3. Disconnect and reconnect to Wi-Fi.</p>
+            <p>4. Restart the router if necessary.</p>
+        `;
+    }
+
+    else if (problem === "slow") {
+
+        solution.innerHTML = `
+            <h3>🐌 Computer is slow</h3>
+            <p>1. Close unnecessary programs.</p>
+            <p>2. Restart the computer.</p>
+            <p>3. Delete unnecessary files.</p>
+            <p>4. Check for viruses or malware.</p>
+        `;
+    }
+
+    else if (problem === "sound") {
+
+        solution.innerHTML = `
+            <h3>🔊 No sound</h3>
+            <p>1. Check the volume level.</p>
+            <p>2. Make sure the computer is not muted.</p>
+            <p>3. Check the speakers or headphones.</p>
+            <p>4. Restart the computer.</p>
+        `;
+    }
+
+    else if (problem === "keyboard") {
+
+        solution.innerHTML = `
+            <h3>⌨️ Keyboard not working</h3>
+            <p>1. Check the keyboard connection.</p>
+            <p>2. Try another USB port if it is a USB keyboard.</p>
+            <p>3. Restart the computer.</p>
+            <p>4. Try another keyboard if available.</p>
+        `;
+    }
+
+    else if (problem === "virus") {
+
+        solution.innerHTML = `
+            <h3>🦠 Suspected computer virus</h3>
+            <p>1. Run a trusted antivirus scan.</p>
+            <p>2. Avoid opening suspicious files or links.</p>
+            <p>3. Update your antivirus software.</p>
+            <p>4. Remove detected threats according to the antivirus instructions.</p>
+        `;
+    }
+      }
+      function checkIP() {
+
+    let ip =
+        document.getElementById("ipAddress").value.trim();
+
+    let result =
+        document.getElementById("ipResult");
+
+    // Check the basic IPv4 format
+    let parts = ip.split(".");
+
+    if (parts.length !== 4) {
+        result.innerHTML =
+            "❌ Invalid IP address. An IPv4 address must have 4 numbers.";
+        return;
+    }
+
+    for (let part of parts) {
+
+        let number = Number(part);
+
+        if (
+            part === "" ||
+            isNaN(number) ||
+            number < 0 ||
+            number > 255
+        ) {
+            result.innerHTML =
+                "❌ Invalid IPv4 address. Each number must be between 0 and 255.";
+            return;
+        }
+    }
+
+    let firstNumber = Number(parts[0]);
+
+    let ipClass = "";
+
+    if (firstNumber >= 1 && firstNumber <= 126) {
+        ipClass = "Class A";
+    }
+    else if (firstNumber >= 128 && firstNumber <= 191) {
+        ipClass = "Class B";
+    }
+    else if (firstNumber >= 192 && firstNumber <= 223) {
+        ipClass = "Class C";
+    }
+    else if (firstNumber >= 224 && firstNumber <= 239) {
+        ipClass = "Class D";
+    }
+    else if (firstNumber >= 240 && firstNumber <= 255) {
+        ipClass = "Class E";
+    }
+
+    let ipType = "";
+
+    if (
+        (firstNumber === 10) ||
+        (firstNumber === 172 && Number(parts[1]) >= 16 && Number(parts[1]) <= 31) ||
+        (firstNumber === 192 && Number(parts[1]) === 168)
+    ) {
+        ipType = "Private IP address";
+    }
+    else {
+        ipType = "Public IP address";
+    }
+
+    result.innerHTML = `
+        <h3>🌐 IP Information</h3>
+
+        <p><strong>IP Address:</strong> ${ip}</p>
+
+        <p><strong>Version:</strong> IPv4</p>
+
+        <p><strong>Class:</strong> ${ipClass}</p>
+
+        <p><strong>Type:</strong> ${ipType}</p>
+    `;
+    }
+
+    </script>
+
+</body>
+
+</html>
